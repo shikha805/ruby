@@ -1,0 +1,9 @@
+<h1>Good Morning!</h1>
+<% x = 0 %>
+<% while x < @cities.length %>
+  <%= @cities[x].name %> <br/>
+  <% x = x + 1 %>
+<% end %>
+<% @cities.each do |city| %>
+  <%= city.name %>-------------------
+<% end %>
