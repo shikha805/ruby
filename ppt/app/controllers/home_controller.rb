@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   end
 
   def show
+    @cities = City.all;
 
   end
 end

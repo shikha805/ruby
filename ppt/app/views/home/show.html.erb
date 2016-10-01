@@ -6,8 +6,8 @@ First name :<input type="text" name="firstname"> </br>
 Last name :<input type="text" name="lastname"> </br>
 </br>
 <u>Gender</u> </br> </br>
-Male<input type="radio" name="maths" value="on">
-Female<input type="radio" name="physics" value="on"> </br>
+Male<input type="radio" name="male" value="on">
+Female<input type="radio" name="female" value="on"> </br>
 </br>
 you are a </br> </br>
 student <input type="checkbox" name="student" value="on"> </br>
@@ -20,9 +20,9 @@ Enter your msg here plz..
 <b>cities </b></br>
 <select name="dropdown">
     <option value="">Select</option>
-    <option value="faridabad" >Faridabad</option>
-    <option value="gurgaon">Gurgaon</option>
-    <option value="delhi">Delhi</option>
-    <option value="chennai">Chennai</option>
-    <option value="hyderabad">Hyderabad</option> </br> </br>
+    <% @cities.each do |city| %>
+       <option value="<%= city.id %>"><%= city.name %></option>
+   <% end %>
+    </select>
+
 <input type="submit" name="submit" value="Submit" /> <br/>
